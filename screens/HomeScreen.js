@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import { Card, CardItem, Body } from 'native-base';
+import Title from '../components/Title';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -52,9 +53,9 @@ export default class HomeScreen extends React.Component {
     return (
 		<View style={styles.container}>
 			<ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-				<Text style={styles.title}>Meu Perfil</Text>
+				<Title>Meu Perfil</Title>
                 <Card>
-                    <CardItem style={styles.cardHeader} header>
+                    <CardItem style={{backgroundColor: '#6c5ce7'}} header>
                         <Text style={styles.cardText}>Livros</Text>
                     </CardItem>
                     <CardItem>
@@ -65,7 +66,7 @@ export default class HomeScreen extends React.Component {
                 </Card>
 
                 <Card>
-                    <CardItem style={styles.cardHeader} header>
+                    <CardItem style={{backgroundColor: '#00b894'}} header>
                         <Text style={styles.cardText}>Alugados</Text>
                     </CardItem>
                     <CardItem>
@@ -76,7 +77,7 @@ export default class HomeScreen extends React.Component {
                 </Card>
 
                 <Card>
-                    <CardItem style={styles.cardHeader} header>
+                    <CardItem style={{backgroundColor: '#ff7675'}} header>
                         <Text style={styles.cardText}>Pendente</Text>
                     </CardItem>
                     <CardItem>
@@ -100,9 +101,6 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingTop: 30,
   },
-  cardHeader: {
-      backgroundColor: '#6c5ce7'
-  },
   cardText: {
 		color: 'white',
 		fontSize: 16
@@ -110,11 +108,6 @@ const styles = StyleSheet.create({
   cardBody: {
       width: '100%',
       fontSize: 25,
-      textAlign: 'center',
       fontWeight: 'bold'
-  },
-  title: {
-	  fontWeight: 'bold',
-	  fontSize: 34
   }
 });
