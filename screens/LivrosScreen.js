@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
-import { Card, CardItem, Form, Item, Input, Button, } from 'native-base';
+import { Card, CardItem, Form, Item, Input, Button, List, ListItem, Left, Thumbnail, } from 'native-base';
 import Title from '../components/Title';
 
 export default class LivrosScreen extends React.Component {
@@ -27,6 +27,16 @@ export default class LivrosScreen extends React.Component {
               }}>Buscar</Text>
             </Button>
           </Form>
+          <List button={true}>
+            <ListItem thumbnail>
+              <Left>
+                <Thumbnail circular  />
+              </Left>
+            </ListItem>
+            <ListItem button={true}>
+              <Text>Livro Teste</Text>
+            </ListItem>
+          </List>
 			  </ScrollView>
 	    </View>
     );
